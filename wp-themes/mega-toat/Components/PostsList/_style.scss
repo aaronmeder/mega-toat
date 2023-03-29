@@ -1,0 +1,41 @@
+flynt-component[name="PostsList"] {
+  .content {
+    @include tablet {
+      padding-right: 100px;
+    }
+  }
+
+  header {
+    padding-bottom: calc(0.25 * var(--flow-space));
+    margin-bottom: var(--flow-space);
+    border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
+  }
+
+  .post {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @include tablet {
+      grid-template-columns: 100px 1fr;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: calc(var(--flow-space) + 1vh);
+    }
+
+    &__link {
+      color: currentColor;
+      text-decoration: none;
+    }
+
+    &__date {
+      //font-size: 1.625rem;
+      line-height: calc(1.625rem + 0.5rem);
+
+      @media (min-width: $breakpoint-mobile-horizontal) {
+        //font-size: 1.825rem;
+        line-height: calc(1.825rem + 0.5rem);
+      }
+    }
+  }
+}

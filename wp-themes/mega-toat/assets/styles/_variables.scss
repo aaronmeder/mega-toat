@@ -1,7 +1,7 @@
 :root,
-[data-theme='reset'] {
+[data-theme="reset"] {
   --color-accent: hsla(212, 100%, 45%, 1);
-  --color-background: hsla(0, 0%, 100%, 1);
+  --color-background: #fcfbf9;
   --color-background-secondary: hsla(0, 0%, 19%, 0.08);
   --color-border: hsl(0, 0%, 90%);
   --color-border-secondary: hsl(0, 0%, 19%, 0.68);
@@ -10,14 +10,14 @@
   --color-error: hsl(343, 98%, 46%);
 }
 
-[data-theme='light'] {
+[data-theme="light"] {
   --color-background: hsla(228, 56%, 98%, 1);
   --color-text: hsla(212, 100%, 15%, 1);
   --color-border: hsla(212, 100%, 15%, 0.7);
   --color-border-secondary: var(--color-border);
 }
 
-[data-theme='dark'] {
+[data-theme="dark"] {
   --color-accent: hsla(79, 100%, 60%, 1);
   --color-background: hsla(212, 100%, 15%, 1);
   --color-background-secondary: hsl(228, 56%, 98%, 0.06);
@@ -30,20 +30,23 @@ $breakpoint-mobile-horizontal: 480px;
 $breakpoint-tablet: 768px;
 $breakpoint-tablet-horizontal: 1024px;
 $breakpoint-desktop: 1280px;
+$breakpoint-desktop-wide: 1440px;
+$breakpoint-desktop-xxl: 1900px;
 
-$heading-selectors: 'h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6';
+$heading-selectors: "h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6";
 $input-selectors: '[type="tel"], [type="url"], [type="text"], [type="date"], [type="email"], [type="search"], [type="number"], [type="password"], textarea, select';
 
 :root {
   // FOUC can be reduced with good matching fallback font: https://meowni.ca/font-style-matcher/
-  --font-family-heading: 'Public Sans', 'Trebuchet MS', sans-serif;
-  --font-family-text: 'Public Sans', 'Trebuchet MS', sans-serif;
+  --font-family-heading: "Public Sans", "Trebuchet MS", sans-serif;
+  --font-family-text: "Public Sans", "Trebuchet MS", sans-serif;
   --font-size-body: 1.125rem; // Always use rem. 1rem = 16px
   --font-size-body-small: 1rem;
   --flow-space: 1.5625rem;
 
   --content-max-width: 700px;
   --content-max-width-large: 800px;
+  --content-max-width-wide: 900px;
   --container-max-width: calc(1200px + (var(--container-padding) * 2));
   --container-max-width-large: calc(1340px + (var(--container-padding) * 2));
 

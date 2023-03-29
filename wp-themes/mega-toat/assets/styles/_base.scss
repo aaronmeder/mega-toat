@@ -4,54 +4,80 @@
 
 @font-face {
   font-display: swap;
-  font-family: 'Public Sans';
+  font-family: "Public Sans";
   font-style: normal;
   font-weight: 400;
-  src: url('../assets/fonts/public-sans-v14-latin-regular.woff2') format('woff2');
+  src: url("../assets/fonts/public-sans-v14-latin-regular.woff2")
+    format("woff2");
 }
 
 @font-face {
   font-display: swap;
-  font-family: 'Public Sans';
+  font-family: "Public Sans";
   font-style: italic;
   font-weight: 400;
-  src: url('../assets/fonts/public-sans-v14-latin-italic.woff2') format('woff2');
+  src: url("../assets/fonts/public-sans-v14-latin-italic.woff2") format("woff2");
 }
 
 @font-face {
   font-display: swap;
-  font-family: 'Public Sans';
+  font-family: "Public Sans";
   font-style: normal;
   font-weight: 500;
-  src: url('../assets/fonts/public-sans-v14-latin-500.woff2') format('woff2');
+  src: url("../assets/fonts/public-sans-v14-latin-500.woff2") format("woff2");
 }
 
 @font-face {
   font-display: swap;
-  font-family: 'Public Sans';
+  font-family: "Public Sans";
   font-style: italic;
   font-weight: 500;
-  src: url('../assets/fonts/public-sans-v14-latin-500italic.woff2') format('woff2');
+  src: url("../assets/fonts/public-sans-v14-latin-500italic.woff2")
+    format("woff2");
 }
 
 @font-face {
   font-display: swap;
-  font-family: 'Public Sans';
+  font-family: "Public Sans";
   font-style: normal;
   font-weight: 700;
-  src: url('../assets/fonts/public-sans-v14-latin-700.woff2') format('woff2');
+  src: url("../assets/fonts/public-sans-v14-latin-700.woff2") format("woff2");
 }
 
 @font-face {
   font-display: swap;
-  font-family: 'Public Sans';
+  font-family: "Public Sans";
   font-style: italic;
   font-weight: 700;
-  src: url('../assets/fonts/public-sans-v14-latin-700italic.woff2') format('woff2');
+  src: url("../assets/fonts/public-sans-v14-latin-700italic.woff2")
+    format("woff2");
+}
+
+body {
+  background-color: var(--color-background);
 }
 
 /* Default flow */
-:where(#{$heading-selectors}, p, .paragraph, ul, ol, pre, table, figure, blockquote, form, fieldset, dl, address, details, hr, aside, video, fieldset) {
+:where(
+    #{$heading-selectors},
+    p,
+    .paragraph,
+    ul,
+    ol,
+    pre,
+    table,
+    figure,
+    blockquote,
+    form,
+    fieldset,
+    dl,
+    address,
+    details,
+    hr,
+    aside,
+    video,
+    fieldset
+  ) {
   + * {
     margin-block-start: var(--flow-space);
   }
@@ -139,7 +165,7 @@ hr {
   &::after {
     background-color: var(--color-text);
     block-size: 2px;
-    content: '';
+    content: "";
     display: block;
     opacity: 0.28;
   }
@@ -344,8 +370,8 @@ textarea {
   vertical-align: top;
 }
 
-[type='checkbox'],
-[type='radio'] {
+[type="checkbox"],
+[type="radio"] {
   accent-color: var(--color-accent);
   block-size: 20px;
   display: inline-block;
@@ -418,6 +444,11 @@ flynt-component {
   max-inline-size: var(--content-max-width-large);
 }
 
+.centerContentMaxWidthWide {
+  margin-inline: auto;
+  max-inline-size: var(--content-max-width-wide);
+}
+
 .flowContent {
   > * + * {
     margin-block-start: var(--flow-space);
@@ -427,7 +458,6 @@ flynt-component {
 .preContent {
   margin: 0 auto calc(var(--component-spacing) / 2);
   max-inline-size: var(--content-max-width);
-  text-align: center;
 }
 
 .postContent {

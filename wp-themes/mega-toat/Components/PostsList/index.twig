@@ -1,0 +1,36 @@
+<flynt-component name="PostsList" load:on="visible" class="componentSpacing" {{ options.theme ? 'data-theme="' ~ options.theme ~ '"' }}>
+  <div class="container centerMaxWidthContainer">
+    <div class="content centerContentMaxWidthWide">
+
+      {% if preContentHtml %}
+        <div class="preContent">
+          {{ preContentHtml|e('wp_kses_post') }}
+        </div>
+      {% endif %}
+
+      <header><h3>Latest Articles</h3></header>
+
+      {% for post in posts %}
+
+        <div class="post">
+          <div class="post__date">
+            <span class="post__day">{{ post.date|date('d') }}</span>
+            <span class="post__month">{{ post.date|date('M') }}</span>
+          </div>
+          <div class="post__infos">
+            <h5 class="post__title">
+                <a href="{{ post.link }}" class="post__link">{{ post.title }}</a>
+            </h4>
+          </div>
+        </div>
+      {% endfor %}
+
+      {% if afterContentHtml %}
+        <div class="afterContent">
+          {{ afterContentHtml|e('wp_kses_post') }}
+        </div>
+      {% endif %}
+
+    </div>
+  </div>
+</flynt-component>
